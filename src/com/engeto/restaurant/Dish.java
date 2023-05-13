@@ -5,17 +5,25 @@ import java.time.Duration;
 
 public class Dish {
     private String title;
-    private int price;
-    private Duration preparationTime;
+    private double price;
+
+    /**
+     * prepartionTime = time in minutes
+     */
+    private int preparationTime;
     String photoUrl = "blank";
     Category category = Category.MAINDISH;
 
-    public Dish(String title, int price, Duration preparationTime, String photoUrl, Category category) {
+    public Dish(String title, double price, int preparationTime, String photoUrl, Category category) {
         this.title = title;
         this.price = price;
         this.preparationTime = preparationTime;
         this.photoUrl = photoUrl;
         this.category = category;
+    }
+
+    public Dish(String title, double price, int preparationTime, Category category){
+        this(title, price, preparationTime, "blank", category);
     }
 
 
@@ -28,19 +36,19 @@ public class Dish {
         this.title = title;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public Duration getPreparationTime() {
+    public int getPreparationTime() {
         return preparationTime;
     }
 
-    public void setPreparationTime(Duration preparationTime) {
+    public void setPreparationTime(int preparationTime) {
         this.preparationTime = preparationTime;
     }
 

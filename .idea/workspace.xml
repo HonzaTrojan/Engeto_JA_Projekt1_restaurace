@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Engeto_JA - Projekt 1 - restaurace.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" afterDir="false" />
+    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- basic Classes and methods">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +44,26 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.engeto.restaurant.Main" />
+      <module name="Engeto_JA - Projekt 1 - restaurace" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.engeto.restaurant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +73,18 @@
       <option name="presentableId" value="Default" />
       <updated>1683979931093</updated>
     </task>
+    <task id="LOCAL-00001" summary="Restaurant project&#10;- basic Classes and methods">
+      <created>1683981996714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683981996714</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Restaurant project&#10;- basic Classes and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- basic Classes and methods" />
   </component>
 </project>

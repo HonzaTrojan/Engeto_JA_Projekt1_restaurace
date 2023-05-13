@@ -1,8 +1,15 @@
 package com.engeto.restaurant;
 
 public enum Category {
-    STARTER, MAINDISH, DESSERT
+    STARTER ("starter"), SOUP ("soup"), MAINDISH ("main dish"), DESSERT ("dessert");
 
+    private String description;
+    Category (String description){
+        this.description = description;
+    }
 
-
+    @Override
+    public String toString() {
+        return description;
+    }
 }

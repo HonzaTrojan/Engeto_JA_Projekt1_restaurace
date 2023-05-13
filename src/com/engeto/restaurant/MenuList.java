@@ -18,5 +18,19 @@ public class MenuList {
         menu.clear();
     }
 
+    public int menuSize(){
+        return menu.size();
+    }
+
+    public void printMenu(){
+        int i = 1;
+        for (Dish dish : menu){
+            System.out.println("Dish no." + i + ": " + dish.getTitle() + ", price of dish is " + dish.getPrice() +
+                    " Eur, preparation time is " + dish.getPreparationTime() + " minutes, category of dish is " +
+                    dish.getCategory());
+            i++;
+        }
+    }
+
 
 }

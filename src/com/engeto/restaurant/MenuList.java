@@ -22,6 +22,10 @@ public class MenuList {
         return menu.size();
     }
 
+    public Dish getDishFromMenu(int index){
+        return menu.get(index);
+    }
+
     public void printMenu(){
         int i = 1;
         for (Dish dish : menu){

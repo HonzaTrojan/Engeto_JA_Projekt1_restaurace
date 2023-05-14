@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- basic Classes and methods">
+    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- add working data (Dish objects) and added into the DishList and menu&#10;- overriding toString() in ENUM Category&#10;- added printing methods into DishList and MenuList classes">
+      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" afterDir="false" />
     </list>
@@ -20,13 +21,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="32df7739-c9ac-46c9-8e45-2e8e9a4b9dbe" />
+        <option name="url" value="https://github.com/HonzaTrojan/Engeto_JA_Projekt1_restaurace.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -80,11 +94,19 @@
       <option name="project" value="LOCAL" />
       <updated>1683981996714</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Restaurant project&#10;- add working data (Dish objects) and added into the DishList and menu&#10;- overriding toString() in ENUM Category&#10;- added printing methods into DishList and MenuList classes">
+      <created>1683993166443</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683993166443</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Restaurant project&#10;- basic Classes and methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- basic Classes and methods" />
+    <MESSAGE value="Restaurant project&#10;- add working data (Dish objects) and added into the DishList and menu&#10;- overriding toString() in ENUM Category&#10;- added printing methods into DishList and MenuList classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- add working data (Dish objects) and added into the DishList and menu&#10;- overriding toString() in ENUM Category&#10;- added printing methods into DishList and MenuList classes" />
   </component>
 </project>

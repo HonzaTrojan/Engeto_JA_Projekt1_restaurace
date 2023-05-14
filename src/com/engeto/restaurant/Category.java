@@ -1,7 +1,7 @@
 package com.engeto.restaurant;
 
 public enum Category {
-    STARTER ("starter"), SOUP ("soup"), MAINDISH ("main dish"), DESSERT ("dessert");
+    STARTER ("starter"), SOUP ("soup"), MAINDISH ("main dish"), DESSERT ("dessert"), DRINK ("drink");
 
     private String description;
     Category (String description){

@@ -1,6 +1,5 @@
 package com.engeto.restaurant;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Main {
@@ -74,6 +73,23 @@ public class Main {
         System.out.println("*******************************");
         System.out.println(order2);
 
+
+        // dishList, menu, ordersList1, ordersList2
+
+//        try {
+//            dishList.loadDataFromDishAndMenuFile(Settings.getDishListFilename());
+//        } catch (DishException e) {
+//            System.err.println(e.getLocalizedMessage());
+//
+//        System.out.println(dishList.getList());
+
+//        dishList.addDataIntoDishAndMenuFile("dishList.txt");
+
+        try {
+            dishList.addDataIntoDishAndMenuFile(Settings.getDishListFilename());
+        } catch (DishException ex) {
+            System.err.println(ex.getLocalizedMessage());
+        }
 
 
 

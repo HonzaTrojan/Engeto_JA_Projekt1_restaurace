@@ -1,0 +1,12 @@
+Spegetti carbonara	10.5	20	SpegettiCarb01, SpagettiCarb02	main dish
+Gazpacho	15.0	10	blank	soup
+Tiramisu	6.5	5	Tiram.photo	dessert
+Wiener schnitzel	25.0	25	Wiener01	main dish
+Rakvička	3.89	2	blank	dessert
+Cabbage soup	7.5	7	blank	soup
+Octopus with sweet potato	17.99	18	Octopus-09	main dish
+Steak, fries, coleslaw	35.0	23	Spegetti01, Spagetti02	main dish
+Carpaccio	6.39	8	Carpacio-pic1	starter
+Tlačenka s cibulí	5.35	6	Tlaca05	starter
+Mojito	7.35	5	Mojito01	drink
+Pivo	4.25	4	Plzen-pic, hladinka01	drink

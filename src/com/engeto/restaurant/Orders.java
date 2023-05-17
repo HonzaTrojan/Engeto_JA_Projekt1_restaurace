@@ -10,7 +10,7 @@ public class Orders {
     private String waiter;
     private OrdersList ordersList;
     private LocalDateTime orderedTime;
-    private LocalDateTime fulfilmentTime;
+    private LocalDateTime fulfilmentTime = null;
     private String note;
 
     public Orders(int table, String waiter, OrdersList ordersList, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, String note) {

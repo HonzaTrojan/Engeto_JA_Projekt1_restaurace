@@ -1,10 +1,17 @@
 package com.engeto.restaurant;
 
+import java.io.*;
+import java.time.DateTimeException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class MenuList {
     List<Dish> menu = new ArrayList<>();
+
+    public List<Dish> getMenu () {
+        return new ArrayList<>(menu);
+    }
 
     public void addDishToMenu(Dish dish){
         menu.add(dish);
@@ -33,6 +40,51 @@ public class MenuList {
                     " Eur, preparation time is " + dish.getPreparationTime() + " minutes, category of dish is " +
                     dish.getCategory());
             i++;
+        }
+    }
+
+
+    public void addDataIntoMenuFile(String filename) throws DishException {
+        String line = "";
+
+        try (PrintWriter outputWriter = new PrintWriter(new BufferedWriter(new FileWriter(filename)))) {
+            for (Dish dish : menu){
+                line = dish.getTitle() + Settings.DELIMITER + dish.getPrice() + Settings.DELIMITER +
+                        dish.getPreparationTime() + Settings.DELIMITER + dish.getPhotoUrl() +
+                        Settings.DELIMITER + dish.getCategory();
+                outputWriter.println(line);
+            }
+        } catch (IOException e) {
+            System.err.println("IOException problem");
+        }
+    }
+
+
+
+    public void loadDataFromMenuFile(String filename) throws DishException {
+        int lineNumber = 0;
+        String[] items;
+        String line = "";
+
+        try (Scanner scanner = new Scanner(new BufferedReader(new FileReader(filename)))) {
+            while (scanner.hasNextLine()) {
+                lineNumber++;
+                line = scanner.nextLine();
+                items = line.split(Settings.DELIMITER);
+                Dish dish = new Dish(items[0], Double.parseDouble(items[1]), Integer.parseInt(items[2]),
+                        items[3], Enum.valueOf(Category.class, items[4]));
+                // getEnumFormat(Enum.valueOf(Category.class, items[4]))
+                menu.add(dish);
+            }
+        } catch (FileNotFoundException e) {
+            throw new DishException("File not found! File \"" +
+                    filename + "\" is not available. " + e.getLocalizedMessage());
+        } catch (NumberFormatException e) {
+            throw new DishException("Wrong number format on line no." +
+                    lineNumber + "\n Line: " + line + "\n\"" + e.getLocalizedMessage() + "\"");
+        } catch (DateTimeException e) {
+            throw new DishException("Wrong date format on line no." +
+                    lineNumber + "\n Line: " + line + "\n\"" + e.getLocalizedMessage() + "\"");
         }
     }
 

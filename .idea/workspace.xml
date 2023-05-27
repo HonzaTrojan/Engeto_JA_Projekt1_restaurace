@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- add classes for orders and list of orders&#10;- add data of orders to Main class&#10;- override toString() methods for orders">
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/DishException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/IoWritter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Settings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/dish-list.txt" afterDir="false" />
+    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- add methods to write data from dishList into file and load it back from file&#10;- add file for saving data dishList.txt  &#10;- add class for exceptions (DishException)">
+      <change afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/OrderOfDish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dishList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +59,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Programy/Programovani/Workspace/IntelliJ IDEA/Engeto - Java akademie/Engeto_JA05_SouboryVyjimky - cviceni hodina"
+    "last_opened_file_path": "C:/Programy/Programovani/Workspace/IntelliJ IDEA/Engeto - Java akademie/Engeto_JA - Projekt 1 - restaurace"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programy\Programovani\Workspace\IntelliJ IDEA\Engeto - Java akademie\Engeto_JA - Projekt 1 - restaurace" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programy\Programovani\Workspace\IntelliJ IDEA\Engeto - Java akademie\Engeto_JA - Projekt 1 - restaurace\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.engeto.restaurant.Main" />
@@ -111,28 +120,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684086232647</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Restaurant project&#10;- add methods to write data from dishList into file and load it back from file&#10;- add file for saving data dishList.txt  &#10;- add class for exceptions (DishException)">
+      <created>1684347461487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684347461487</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Restaurant project&#10;- basic Classes and methods" />
     <MESSAGE value="Restaurant project&#10;- add working data (Dish objects) and added into the DishList and menu&#10;- overriding toString() in ENUM Category&#10;- added printing methods into DishList and MenuList classes" />
     <MESSAGE value="Restaurant project&#10;- add classes for orders and list of orders&#10;- add data of orders to Main class&#10;- override toString() methods for orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- add classes for orders and list of orders&#10;- add data of orders to Main class&#10;- override toString() methods for orders" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java</url>
-          <line>34</line>
-          <properties class="com.engeto.restaurant.DishList" method="addDataIntoDishAndMenuFile">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Restaurant project&#10;- add methods to write data from dishList into file and load it back from file&#10;- add file for saving data dishList.txt  &#10;- add class for exceptions (DishException)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- add methods to write data from dishList into file and load it back from file&#10;- add file for saving data dishList.txt  &#10;- add class for exceptions (DishException)" />
   </component>
 </project>

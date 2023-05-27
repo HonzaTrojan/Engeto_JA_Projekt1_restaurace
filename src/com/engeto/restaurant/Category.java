@@ -1,15 +1,21 @@
 package com.engeto.restaurant;
 
 public enum Category {
-    STARTER ("starter"), SOUP ("soup"), MAINDISH ("main dish"), DESSERT ("dessert"), DRINK ("drink");
+    STARTER, SOUP, MAINDISH, DESSERT, DRINK
 
-    private String description;
-    Category (String description){
-        this.description = description;
-    }
 
-    @Override
-    public String toString() {
-        return description;
-    }
+//    STARTER ("starter"), SOUP ("soup"), MAINDISH ("main dish"),
+//    DESSERT ("dessert"), DRINK ("drink");
+//
+//    private String description;
+//    Category (String description){
+//        this.description = description;
+//    }
+//
+//
+//
+//    @Override
+//    public String toString() {
+//        return description;
+//    }
 }

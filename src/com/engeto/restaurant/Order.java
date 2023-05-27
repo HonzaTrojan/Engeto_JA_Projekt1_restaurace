@@ -1,22 +1,19 @@
 package com.engeto.restaurant;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.SplittableRandom;
 
-public class Orders {
+public class Order {
     private int table;
     private String waiter;
-    private OrdersList ordersList;
+    private OrderOfDish orderOfDishList;
     private LocalDateTime orderedTime;
     private LocalDateTime fulfilmentTime = null;
     private String note;
 
-    public Orders(int table, String waiter, OrdersList ordersList, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, String note) {
+    public Order(int table, String waiter, OrderOfDish orderOfDishList, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, String note) {
         this.table = table;
         this.waiter = waiter;
-        this.ordersList = ordersList;
+        this.orderOfDishList = orderOfDishList;
         this.orderedTime = orderedTime;
         this.fulfilmentTime = fulfilmentTime;
         this.note = note;
@@ -40,12 +37,12 @@ public class Orders {
         this.waiter = waiter;
     }
 
-    public OrdersList getOrdersList() {
-        return ordersList;
+    public OrderOfDish getOrdersList() {
+        return orderOfDishList;
     }
 
-    public void setOrdersList(OrdersList ordersList) {
-        this.ordersList = ordersList;
+    public void setOrdersList(OrderOfDish orderOfDishList) {
+        this.orderOfDishList = orderOfDishList;
     }
 
     public LocalDateTime getOrderedTime() {
@@ -76,11 +73,14 @@ public class Orders {
     ///endregion
 
 
+
+
+
     @Override
     public String toString() {
         return "Order on table no." + table +
                 ", waiter name is " + waiter +
-                "\n Dishes ordered: " + ordersList +
+                "\n Dishes ordered: " + orderOfDishList +
                 "\n Time of order: " + orderedTime +
                 ", time of fulfilment: " + fulfilmentTime +
                 "\nNote: " + note;

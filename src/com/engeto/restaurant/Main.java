@@ -50,33 +50,45 @@ public class Main {
         menu.printMenu();
 
 
-
         OrderOfDish orderOfDish1 = new OrderOfDish();
         orderOfDish1.addDishToOrder(menu.getDishFromMenu(0));
         orderOfDish1.addDishToOrder(menu.menu.get(1));
         orderOfDish1.addDishToOrder(menu.menu.get(2));
         orderOfDish1.addDishToOrder(menu.menu.get(6));
-
-        Order order1 = new Order(1, "Franta", orderOfDish1, LocalDateTime.now(), LocalDateTime.now().plusMinutes(30), "Dish and service were amazing!");
-
-
+        Order order1 = new Order(1, "Evelína", orderOfDish1, LocalDateTime.now(), "Dish and service were amazing!");
         System.out.println("*******************************");
         System.out.println(order1);
+
 
         OrderOfDish orderOfDishList2 = new OrderOfDish();
         orderOfDishList2.addDishToOrder(menu.getDishFromMenu(3));
         orderOfDishList2.addDishToOrder(menu.menu.get(5));
-
-
-        Order order2 = new Order(3, "Jana", orderOfDishList2, LocalDateTime.now(), LocalDateTime.now().plusMinutes(45), "I like the dinner but service was sooo slow!");
-
+        Order order2 = new Order(3, "Chrudoš", orderOfDishList2, LocalDateTime.now().minusMinutes(60), LocalDateTime.now(), "I like the dinner but service was sooo slow!");
         System.out.println("*******************************");
         System.out.println(order2);
+
+
+        OrderOfDish orderOfDishList3 = new OrderOfDish();
+        orderOfDishList3.addDishToOrder(menu.menu.get(6));
+        orderOfDishList3.addDishToOrder(menu.menu.get(6));
+        orderOfDishList3.addDishToOrder(menu.menu.get(6));
+        orderOfDishList3.addDishToOrder(menu.menu.get(6));
+        orderOfDishList3.addDishToOrder(menu.menu.get(6));
+        orderOfDishList3.addDishToOrder(menu.menu.get(6));
+        orderOfDishList3.addDishToOrder(menu.menu.get(6));
+        Order order3 = new Order(15, "Štáhlav", orderOfDishList3, LocalDateTime.now().minusMinutes(120), "Aargh....");
+        System.out.println("*******************************");
+        System.out.println(order3);
 
 
         OrdersList ordersList = new OrdersList();
         ordersList.addOrderToOrdersList(order1);
         ordersList.addOrderToOrdersList(order2);
+        ordersList.addOrderToOrdersList(order3);
+
+        System.out.println("*******************************");
+        System.out.println("Number of unfinished orders is: " + ordersList.unfinishedOrders());
+
 
 
 

@@ -1,5 +1,7 @@
 package com.engeto.restaurant;
-
+/**
+ *   MenuList - dishes chosen from DishList for today`s offer
+ */
 import java.io.*;
 import java.time.DateTimeException;
 import java.util.ArrayList;

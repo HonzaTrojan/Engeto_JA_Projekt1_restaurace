@@ -1,5 +1,7 @@
 package com.engeto.restaurant;
-
+/**
+ *   OrderOfDish - list of dishes ordered in one particular order
+ */
 import java.util.ArrayList;
 import java.util.List;
 

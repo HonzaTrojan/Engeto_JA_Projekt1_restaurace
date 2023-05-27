@@ -1,7 +1,9 @@
 package com.engeto.restaurant;
 
 import java.time.LocalDateTime;
-
+/**
+ *   Order - overview of one particular order with details (e.g. name of waiter, number of table, list of dishes ordered etc.)
+ */
 public class Order {
     private int table;
     private String waiter;
@@ -17,6 +19,10 @@ public class Order {
         this.orderedTime = orderedTime;
         this.fulfilmentTime = fulfilmentTime;
         this.note = note;
+    }
+
+    public Order (int table, String waiter, OrderOfDish orderOfDishList, LocalDateTime orderedTime, String note) {
+        this (table, waiter, orderOfDishList, orderedTime, null, note);
     }
 
     ///region Getters and setters

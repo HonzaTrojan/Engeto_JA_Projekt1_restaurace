@@ -1,5 +1,7 @@
 package com.engeto.restaurant;
-
+/**
+ *   OrdersList - overview of all ordered orders
+ */
 import java.io.*;
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
@@ -27,8 +29,17 @@ public class OrdersList {
         ordersList.clear();
     }
 
-    public int
+    public int ordersListSize (){
+        return ordersList.size();
+    }
 
+    public int unfinishedOrders(){
+        int counter = 0;
+        for (Order order : ordersList){
+            if (order.getFulfilmentTime() == null) counter++;
+        }
+        return counter;
+    }
 
 
 

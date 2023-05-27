@@ -1,5 +1,7 @@
 package com.engeto.restaurant;
-
+/**
+*   DishList - List of all possible dishes tha our cooks are able to cook (It is a base for creation of menu)
+ */
 import java.io.*;
 import java.time.DateTimeException;
 import java.util.ArrayList;

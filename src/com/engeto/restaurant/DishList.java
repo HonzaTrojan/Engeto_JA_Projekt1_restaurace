@@ -19,6 +19,9 @@ public class DishList {
     public void addDish(Dish dish){
         dishList.add(dish);
     }
+    public Dish getDish(int index){
+        return dishList.get(index);
+    }
 
     public void removeDish(Dish dish){
         dishList.remove(dish);

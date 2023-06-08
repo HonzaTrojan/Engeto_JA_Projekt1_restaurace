@@ -4,10 +4,7 @@ package com.engeto.restaurant;
  */
 import java.io.*;
 import java.time.DateTimeException;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class OrdersList {
 
@@ -33,7 +30,7 @@ public class OrdersList {
         return ordersList.size();
     }
 
-    public int unfinishedOrders(){
+    public int numberOfUnfinishedOrders(){
         int counter = 0;
         for (Order order : ordersList){
             if (order.getFulfilmentTime() == null) counter++;
@@ -41,7 +38,44 @@ public class OrdersList {
         return counter;
     }
 
+    public void listOfUnfinishedOrders(){
+        for (Order order : ordersList){
+            if (order.getFulfilmentTime() == null) System.out.println("Table no.: " + order.getTable() +
+                ", ordered food: " + order.getDishFromOrder() + ", time of order: " + order.getOrderedTime());
+        }
+    }
 
+    public void priceOfOrdersByWaiter(){
+        Set<String> setOfWaiters = new HashSet<>();
+        for (Order order : ordersList){
+            setOfWaiters.add(order.getWaiter());
+        }
+        List<String> listOfWaiters = new ArrayList<>(setOfWaiters);
+
+        int numberOfWaiters = setOfWaiters.size();
+        System.out.println("__________________");
+        System.out.println(listOfWaiters);
+
+        for (int i = 0; i < numberOfWaiters; i++){
+            String waiterName = listOfWaiters.get(i);
+            double result =0;
+            for (Order order : ordersList) {
+                if (order.getWaiter() == waiterName){
+                    result += order.getDishFromOrder().getPrice();
+                }
+        }
+            System.out.println("Total price of orders of waiter " + waiterName + " is: " + result );
+        }
+
+    }
+
+    public void sortOrdersByWaiter (){
+        Collections.sort(ordersList, (o1, o2) -> o1.getWaiter().compareTo(o2.getWaiter()));
+    }
+
+    public void sortOrdersByOrderTime (){
+        Collections.sort(ordersList, (o1, o2) -> o1.getOrderedTime().compareTo(o2.getOrderedTime()));
+    }
 
     public void addDataIntoOrdersFile(String filename) throws DishException {
         String line = "";
@@ -49,7 +83,7 @@ public class OrdersList {
         try (PrintWriter outputWriter = new PrintWriter(new BufferedWriter(new FileWriter(filename)))) {
             for (Order order : ordersList){
                 line = order.getTable() + Settings.DELIMITER + order.getWaiter() + Settings.DELIMITER +
-                        order.getOrdersList() + Settings.DELIMITER + order.getOrderedTime() +
+                        order.getDishFromOrder() + Settings.DELIMITER + order.getOrderedTime() +
                         Settings.DELIMITER + order.getFulfilmentTime() + Settings.DELIMITER +
                         order.getNote();
                 outputWriter.println(line);

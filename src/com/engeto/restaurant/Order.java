@@ -7,22 +7,22 @@ import java.time.LocalDateTime;
 public class Order {
     private int table;
     private String waiter;
-    private OrderOfDish orderOfDishList;
+    private Dish dish;
     private LocalDateTime orderedTime;
     private LocalDateTime fulfilmentTime = null;
     private String note;
 
-    public Order(int table, String waiter, OrderOfDish orderOfDishList, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, String note) {
+    public Order(int table, String waiter, Dish dish, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, String note) {
         this.table = table;
         this.waiter = waiter;
-        this.orderOfDishList = orderOfDishList;
+        this.dish = dish;
         this.orderedTime = orderedTime;
         this.fulfilmentTime = fulfilmentTime;
         this.note = note;
     }
 
-    public Order (int table, String waiter, OrderOfDish orderOfDishList, LocalDateTime orderedTime, String note) {
-        this (table, waiter, orderOfDishList, orderedTime, null, note);
+    public Order (int table, String waiter, Dish dish, LocalDateTime orderedTime, String note) {
+        this (table, waiter, dish, orderedTime, null, note);
     }
 
     ///region Getters and setters
@@ -43,12 +43,12 @@ public class Order {
         this.waiter = waiter;
     }
 
-    public OrderOfDish getOrdersList() {
-        return orderOfDishList;
+    public Dish getDishFromOrder() {
+        return dish;
     }
 
-    public void setOrdersList(OrderOfDish orderOfDishList) {
-        this.orderOfDishList = orderOfDishList;
+    public void setDishToOrder(Dish dish) {
+        this.dish = dish;
     }
 
     public LocalDateTime getOrderedTime() {
@@ -86,9 +86,9 @@ public class Order {
     public String toString() {
         return "Order on table no." + table +
                 ", waiter name is " + waiter +
-                "\n Dishes ordered: " + orderOfDishList +
-                "\n Time of order: " + orderedTime +
+                "\n     Dish ordered: " + dish +
+                "\n     Time of order: " + orderedTime +
                 ", time of fulfilment: " + fulfilmentTime +
-                "\nNote: " + note;
+                "\n     Note: " + note;
     }
 }

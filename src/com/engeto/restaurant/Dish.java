@@ -70,8 +70,8 @@ public class Dish {
     ///endregion
 
 
-
-
-
-
+    @Override
+    public String toString() {
+        return title;
+    }
 }

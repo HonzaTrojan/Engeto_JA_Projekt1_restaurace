@@ -3,6 +3,7 @@ package com.engeto.restaurant;
  *   MenuList - dishes chosen from DishList for today`s offer
  */
 import java.io.*;
+import java.math.BigDecimal;
 import java.time.DateTimeException;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,9 +74,8 @@ public class MenuList {
                 lineNumber++;
                 line = scanner.nextLine();
                 items = line.split(Settings.DELIMITER);
-                Dish dish = new Dish(items[0], Double.parseDouble(items[1]), Integer.parseInt(items[2]),
+                Dish dish = new Dish(items[0], BigDecimal.valueOf(Double.parseDouble(items[1])), Integer.parseInt(items[2]),
                         items[3], Enum.valueOf(Category.class, items[4]));
-                // getEnumFormat(Enum.valueOf(Category.class, items[4]))
                 menu.add(dish);
             }
         } catch (FileNotFoundException e) {

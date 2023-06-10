@@ -3,7 +3,11 @@ package com.engeto.restaurant;
  *   OrdersList - overview of all ordered orders
  */
 import java.io.*;
+import java.math.BigDecimal;
 import java.time.DateTimeException;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.*;
 
 public class OrdersList {
@@ -30,6 +34,7 @@ public class OrdersList {
         return ordersList.size();
     }
 
+
     public int numberOfUnfinishedOrders(){
         int counter = 0;
         for (Order order : ordersList){
@@ -38,12 +43,14 @@ public class OrdersList {
         return counter;
     }
 
+
     public void listOfUnfinishedOrders(){
         for (Order order : ordersList){
             if (order.getFulfilmentTime() == null) System.out.println("Table no.: " + order.getTable() +
                 ", ordered food: " + order.getDishFromOrder() + ", time of order: " + order.getOrderedTime());
         }
     }
+
 
     public void priceOfOrdersByWaiter(){
         Set<String> setOfWaiters = new HashSet<>();
@@ -58,10 +65,10 @@ public class OrdersList {
 
         for (int i = 0; i < numberOfWaiters; i++){
             String waiterName = listOfWaiters.get(i);
-            double result =0;
+            BigDecimal result = BigDecimal.valueOf(0);
             for (Order order : ordersList) {
                 if (order.getWaiter() == waiterName){
-                    result += order.getDishFromOrder().getPrice();
+                    result = result.add(order.getDishFromOrder().getPrice());
                 }
         }
             System.out.println("Total price of orders of waiter " + waiterName + " is: " + result );
@@ -69,13 +76,40 @@ public class OrdersList {
 
     }
 
+
     public void sortOrdersByWaiter (){
         Collections.sort(ordersList, (o1, o2) -> o1.getWaiter().compareTo(o2.getWaiter()));
     }
 
+
     public void sortOrdersByOrderTime (){
         Collections.sort(ordersList, (o1, o2) -> o1.getOrderedTime().compareTo(o2.getOrderedTime()));
     }
+
+
+    public double avgTimeOfOrders(LocalDateTime beginingOfPeriod, LocalDateTime endOfPeriod){
+        Duration duration = Duration.ZERO;
+        double result = 0;
+        int numberOfOrders = 0;
+        for (Order order : ordersList) {
+            if (order.getFulfilmentTime() != null && order.getOrderedTime().isAfter(beginingOfPeriod) && order.getFulfilmentTime().isBefore(endOfPeriod)){
+                duration = duration.plus(Duration.between(order.getOrderedTime(), order.getFulfilmentTime()));
+                numberOfOrders++;
+            }
+        }
+        result = duration.toMinutes()/numberOfOrders;
+        return result;
+    }
+
+    public void dishesOrderedToday (){
+        Set<String> dishesToday = new HashSet<>();
+        for (Order order : ordersList) {
+            dishesToday.add(order.getDishFromOrder().getTitle());
+        }
+        System.out.println(dishesToday);
+    }
+
+
 
     public void addDataIntoOrdersFile(String filename) throws DishException {
         String line = "";

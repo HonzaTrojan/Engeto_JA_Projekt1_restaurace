@@ -5,7 +5,7 @@ import java.time.Duration;
 
 public class Dish {
     private String title;
-    private double price;
+    private BigDecimal price;
 
     /**
      * prepartionTime = time in minutes
@@ -14,7 +14,7 @@ public class Dish {
     String photoUrl = "blank";
     Category category = Category.MAINDISH;
 
-    public Dish(String title, double price, int preparationTime, String photoUrl, Category category) {
+    public Dish(String title, BigDecimal price, int preparationTime, String photoUrl, Category category) {
         this.title = title;
         this.price = price;
         this.preparationTime = preparationTime;
@@ -22,7 +22,7 @@ public class Dish {
         this.category = category;
     }
 
-    public Dish(String title, double price, int preparationTime, Category category){
+    public Dish(String title, BigDecimal price, int preparationTime, Category category){
         this(title, price, preparationTime, "blank", category);
     }
 
@@ -36,11 +36,11 @@ public class Dish {
         this.title = title;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

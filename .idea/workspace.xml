@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- add method to check number of unfinished orders (in OrdersList class)">
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersWaiterComparator.java" afterDir="false" />
+    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- add three methods in OrdersList class &#10;1) to show total price of orders by waiter (priceOfOrdersByWaiter)&#10;2) to sort orders by name of waiter (sortOrdersByWaiter)&#10;3) to sort orders by time of order (sortOrdersByOrderTime)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dishList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/OrderOfDish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,8 +139,26 @@
       <option name="project" value="LOCAL" />
       <updated>1685177982263</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Restaurant project&#10;- add three methods in OrdersList class &#10;1) to show total price of orders by waiter (priceOfOrdersByWaiter)&#10;2) to sort orders by name of waiter (sortOrdersByWaiter)&#10;3) to sort orders by time of order (sortOrdersByOrderTime)">
+      <created>1686200928851</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686200928851</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Restaurant project&#10;- basic Classes and methods" />
@@ -149,6 +167,7 @@
     <MESSAGE value="Restaurant project&#10;- add methods to write data from dishList into file and load it back from file&#10;- add file for saving data dishList.txt  &#10;- add class for exceptions (DishException)" />
     <MESSAGE value="Restaurant project&#10;- add methods to write data from dishList, menuList and orderList into file and load it back from file&#10;- add file for saving data dishList.txt, menu.txt, orders.txt" />
     <MESSAGE value="Restaurant project&#10;- add method to check number of unfinished orders (in OrdersList class)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- add method to check number of unfinished orders (in OrdersList class)" />
+    <MESSAGE value="Restaurant project&#10;- add three methods in OrdersList class &#10;1) to show total price of orders by waiter (priceOfOrdersByWaiter)&#10;2) to sort orders by name of waiter (sortOrdersByWaiter)&#10;3) to sort orders by time of order (sortOrdersByOrderTime)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- add three methods in OrdersList class &#10;1) to show total price of orders by waiter (priceOfOrdersByWaiter)&#10;2) to sort orders by name of waiter (sortOrdersByWaiter)&#10;3) to sort orders by time of order (sortOrdersByOrderTime)" />
   </component>
 </project>

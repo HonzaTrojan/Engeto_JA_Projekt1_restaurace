@@ -1,7 +1,7 @@
 Spegetti carbonara	10.5	20	SpegettiCarb01, SpagettiCarb02	MAINDISH
-Gazpacho	15.0	10	blank	SOUP
+Gazpacho	15	10	blank	SOUP
 Tiramisu	6.5	5	Tiram.photo	DESSERT
-Wiener schnitzel	25.0	25	Wiener01	MAINDISH
-Steak, fries, coleslaw	35.0	23	Spegetti01, Spagetti02	MAINDISH
+Wiener schnitzel	25	25	Wiener01	MAINDISH
+Steak, fries, coleslaw	35	23	Spegetti01, Spagetti02	MAINDISH
 Carpaccio	6.39	8	Carpacio-pic1	STARTER
 Pivo	4.25	4	Plzen-pic, hladinka01	DRINK

@@ -123,6 +123,9 @@ public class Main {
         System.out.println("Dishes ordered today: ");
         ordersList.dishesOrderedToday();
 
+        System.out.println("*******************************");
+        ordersList.exportForOneTable(1);
+
 
 
         try {

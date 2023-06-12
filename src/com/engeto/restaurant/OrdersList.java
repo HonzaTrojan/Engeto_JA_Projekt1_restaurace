@@ -109,6 +109,23 @@ public class OrdersList {
         System.out.println(dishesToday);
     }
 
+    public void exportForOneTable (int table){
+        if (table<10) System.out.println("** Orders for table no.: " + " " + table + " **" + "\n****");
+        else System.out.println("** Orders for table no.: " + table + " **" + "\n****");
+
+        int counter = 1;
+        for (Order order : ordersList) {
+            if (order.getTable() == table){
+                System.out.println(counter + ". " + order.getDishFromOrder() + " 1x (" +
+                        order.getDishFromOrder().getPrice() + " Eur):\t" + order.getOrderedTime().getHour() +
+                        ":" + order.getOrderedTime().getMinute() + "-" + order.getFulfilmentTime().getHour() +
+                        ":" + order.getFulfilmentTime().getMinute() + "\t" + ", waiter: " + order.getWaiter());
+                counter++;
+            }
+        }
+        System.out.println("******");
+    }
+
 
 
     public void addDataIntoOrdersFile(String filename) throws DishException {

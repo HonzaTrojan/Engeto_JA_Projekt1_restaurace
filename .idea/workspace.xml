@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- add one method in OrdersList class &#10;1) to print order for particular table according to instructions and connection to front end (exportForOneTable)">
+    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- final version of project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishList.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686547739757</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Restaurant project&#10;- final version of project">
+      <created>1686764392664</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686764392664</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +185,7 @@
     <MESSAGE value="Restaurant project&#10;- add three methods in OrdersList class &#10;1) to show total price of orders by waiter (priceOfOrdersByWaiter)&#10;2) to sort orders by name of waiter (sortOrdersByWaiter)&#10;3) to sort orders by time of order (sortOrdersByOrderTime)" />
     <MESSAGE value="Restaurant project&#10;- add two methods in OrdersList class &#10;1) to calculate avg time of finish of order (avgTimeOfOrders)&#10;2) to show dishes ordered today (dishesOrderedToday)&#10;- change data type of price from double to BigDecimal" />
     <MESSAGE value="Restaurant project&#10;- add one method in OrdersList class &#10;1) to print order for particular table according to instructions and connection to front end (exportForOneTable)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- add one method in OrdersList class &#10;1) to print order for particular table according to instructions and connection to front end (exportForOneTable)" />
+    <MESSAGE value="Restaurant project&#10;- final version of project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- final version of project" />
   </component>
 </project>

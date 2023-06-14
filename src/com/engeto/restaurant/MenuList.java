@@ -46,6 +46,13 @@ public class MenuList {
         }
     }
 
+    public boolean isDishOnMenu(Dish dish){
+        for (Dish dish1 : menu){
+            if (dish1 == dish) return true;
+        }
+        return false;
+    }
+
 
     public void addDataIntoMenuFile(String filename) throws DishException {
         String line = "";

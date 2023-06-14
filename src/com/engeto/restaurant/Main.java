@@ -2,8 +2,7 @@ package com.engeto.restaurant;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Collections;
-import java.util.Comparator;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -38,6 +37,19 @@ public class Main {
         System.out.println("We have " + dishList.dishListSize() + " dishes and drinks on the list in total for now. The current dish list is:");
         dishList.printDishList();
 
+        try {
+            dishList.addDataIntoDishFile(Settings.getDishListFilename());
+        } catch (DishException ex) {
+            System.err.println(ex.getLocalizedMessage());
+        }
+
+        try {
+            dishList.loadDataFromDishFile(Settings.getDishListFilename());
+        } catch (DishException e) {
+            System.err.println(e.getLocalizedMessage());
+            System.out.println(dishList.getList());
+        }
+
 
         MenuList menu = new MenuList();
         menu.addDishToMenu(dishList.getDish(0));
@@ -54,14 +66,27 @@ public class Main {
         System.out.println("We have " + menu.menuSize() + " dishes and drinks on the menu for now. The current menu is:");
         menu.printMenu();
 
+        try {
+            menu.addDataIntoMenuFile(Settings.getMenuFilename());
+        } catch (DishException ex) {
+            System.err.println(ex.getLocalizedMessage());
+        }
+
+        try {
+            menu.loadDataFromMenuFile(Settings.getMenuFilename());
+        } catch (DishException e) {
+            System.err.println(e.getLocalizedMessage());
+            System.out.println(menu.getMenu());
+        }
+
 
 
         Order order1 = new Order(1, "Evelina", menu.getDishFromMenu(0), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), "Dish and service were amazing!");
         Order order2 = new Order(1, "Evelina", menu.getDishFromMenu(1), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), "Dish and service were amazing!");
         Order order3 = new Order(1, "Niel", menu.getDishFromMenu(2), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), "Dish and service were amazing!");
         Order order4 = new Order(1, "Evelina", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), "Dish and service were amazing!");
-        Order order5 = new Order(3, "Chrudo", menu.getDishFromMenu(3), LocalDateTime.now().minusMinutes(60), LocalDateTime.now().minusMinutes(5), "I like the food but service was sooo slow!");
-        Order order6 = new Order(3, "Chrudo", menu.getDishFromMenu(5), LocalDateTime.now().minusMinutes(60), LocalDateTime.now().minusMinutes(5), "I like the food but service was sooo slow!");
+        Order order5 = new Order(2, "Chrudo", menu.getDishFromMenu(3), LocalDateTime.now().minusMinutes(60), LocalDateTime.now().minusMinutes(5), "I like the food but service was sooo slow!");
+        Order order6 = new Order(2, "Chrudo", menu.getDishFromMenu(5), LocalDateTime.now().minusMinutes(60), LocalDateTime.now().minusMinutes(5), "I like the food but service was sooo slow!");
         Order order7 = new Order(15, "Zed", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(120), "One more");
         Order order8 = new Order(15, "Stahlav", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(100), "One more....");
         Order order9 = new Order(15, "Stahlav", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(90), "One more....");
@@ -69,6 +94,7 @@ public class Main {
         Order order11 = new Order(15, "Stahlav", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(50), "One more....");
         Order order12 = new Order(15, "Stahlav", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(30), "One more....");
         Order order13 = new Order(15, "Stahlav", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(10), "Aargh....");
+
 
         System.out.println("*******************************");
         System.out.println(order1 + "\n" + order2 + "\n" + order3 + "\n" + order4 + "\n" + order5 +
@@ -93,6 +119,20 @@ public class Main {
         ordersList.addOrderToOrdersList(order13);
 
         ordersList.getOrdersList();
+
+        try {
+            ordersList.addDataIntoOrdersFile(Settings.getOrdersFilename());
+        } catch (DishException ex) {
+            System.err.println(ex.getLocalizedMessage());
+        }
+
+        try {
+            ordersList.loadDataFromOrdersFile(Settings.getOrdersFilename());
+        } catch (DishException e) {
+            System.err.println(e.getLocalizedMessage());
+            System.out.println(ordersList.getOrdersList());
+        }
+
 
         System.out.println("*******************************");
         System.out.println("Number of unfinished orders is: " + ordersList.numberOfUnfinishedOrders());
@@ -127,47 +167,6 @@ public class Main {
         ordersList.exportForOneTable(1);
 
 
-
-        try {
-            dishList.addDataIntoDishFile(Settings.getDishListFilename());
-        } catch (DishException ex) {
-            System.err.println(ex.getLocalizedMessage());
-        }
-
-        try {
-            dishList.loadDataFromDishFile(Settings.getDishListFilename());
-        } catch (DishException e) {
-            System.err.println(e.getLocalizedMessage());
-            System.out.println(dishList.getList());
-        }
-
-
-        try {
-            menu.addDataIntoMenuFile(Settings.getMenuFilename());
-        } catch (DishException ex) {
-            System.err.println(ex.getLocalizedMessage());
-        }
-
-        try {
-            menu.loadDataFromMenuFile(Settings.getMenuFilename());
-        } catch (DishException e) {
-            System.err.println(e.getLocalizedMessage());
-            System.out.println(menu.getMenu());
-        }
-
-
-        try {
-            ordersList.addDataIntoOrdersFile(Settings.getOrdersFilename());
-        } catch (DishException ex) {
-            System.err.println(ex.getLocalizedMessage());
-        }
-
-        try {
-            ordersList.loadDataFromOrdersFile(Settings.getOrdersFilename());
-        } catch (DishException e) {
-            System.err.println(e.getLocalizedMessage());
-            System.out.println(ordersList.getOrdersList());
-        }
 
 
 

@@ -39,7 +39,7 @@ public class DishList {
         for (Dish dish : dishList){
             System.out.println("Dish no." + i + ": " + dish.getTitle() + ", price of dish is " + dish.getPrice() +
                     " Eur, preparation time is " + dish.getPreparationTime() + " minutes, category of dish is " +
-                    dish.getCategory());
+                    dish.getCategoryLowerCase());
             i++;
         }
     }

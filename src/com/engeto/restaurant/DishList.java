@@ -45,6 +45,10 @@ public class DishList {
     }
 
 
+
+
+
+
     public void addDataIntoDishFile(String filename) throws DishException {
         String line = "";
 
@@ -87,24 +91,6 @@ public class DishList {
                     lineNumber + "\n Line: " + line + "\n\"" + e.getLocalizedMessage() + "\"");
         }
     }
-
-//    private String toString(Category valueOf) {
-//        return String.valueOf(valueOf);
-//    }
-
-//    public Category getEnumFormat(Category returnName){
-//        Category name = null;
-//
-//        if (returnName.equals("starter")) name = Category.STARTER;
-//        else if (returnName.equals("soup")) name = Category.SOUP;
-//        else if (returnName.equals("main dish")) name = Category.MAINDISH;
-//        else if (returnName.equals("dessert")) name = Category.DESSERT;
-//        else if (returnName.equals("drink")) name = Category.DRINK;
-//
-//        return name;
-//    }
-
-
 
 
 }

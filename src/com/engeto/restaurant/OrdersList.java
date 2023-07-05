@@ -34,6 +34,14 @@ public class OrdersList {
         return ordersList.size();
     }
 
+    public Dish getDishFromOrderList (String nameOfDish){
+        Dish dish = null;
+        for (Order order : ordersList){
+            if (order.getDishFromOrder().getTitle().equals(nameOfDish)) return order.getDishFromOrder();
+        }
+     return dish;
+    }
+
 
     public int numberOfUnfinishedOrders(){
         int counter = 0;
@@ -146,6 +154,7 @@ public class OrdersList {
 
 
 
+
     public void loadDataFromOrdersFile(String filename) throws DishException {
         int lineNumber = 0;
         String[] items;
@@ -156,11 +165,11 @@ public class OrdersList {
                 lineNumber++;
                 line = scanner.nextLine();
                 items = line.split(Settings.DELIMITER);
-//                Order order = new Order(Integer.parseInt(items[0]), items[1], Orders.class,       // na třetí pozici chybí items[2] = OrdersList ordersList
-//                        LocalDateTime.parse(items[3]), LocalDateTime.parse(items[4]), items[5]);
+              Order order = new Order(Integer.parseInt(items[0]), items[1], getDishFromOrderList(items[2]),
+                        LocalDateTime.parse(items[3]), LocalDateTime.parse(items[4]), items[5]);
+                ordersList.add(order);
 
 
-//                ordersList.add(order);
             }
         } catch (FileNotFoundException e) {
             throw new DishException("File not found! File \"" +

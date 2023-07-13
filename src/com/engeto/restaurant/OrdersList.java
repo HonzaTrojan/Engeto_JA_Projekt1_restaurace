@@ -148,7 +148,8 @@ public class OrdersList {
                 outputWriter.println(line);
             }
         } catch (IOException e) {
-            System.err.println("IOException problem");
+            throw new DishException("Došlo k chybě při zápisu do soubrou: " + filename +
+                    ": " + e.getLocalizedMessage());
         }
     }
 

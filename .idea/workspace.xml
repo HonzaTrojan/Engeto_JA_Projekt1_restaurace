@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- create method getCategoryLowerCase() in Dish class to print dish category in lower case&#10;- use this method in printDishList() method in DishList class and in printMenu() method in MenuList class">
+    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- modification of loadDataFromOrdersFile method - getting Dish class from file data&#10;- add getDishFromOrderList method in OrdersList class to get Dish class object from OrdersList arrayList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,14 +52,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Programy/Programovani/Workspace/IntelliJ IDEA/Engeto - Java akademie/Engeto_JA - Projekt 1 - restaurace&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Programy/Programovani/Workspace/IntelliJ IDEA/Engeto - Java akademie/Engeto_JA05_SouboryVyjimky - cviceni hodina"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programy\Programovani\Workspace\IntelliJ IDEA\Engeto - Java akademie\Engeto_JA - Projekt 1 - restaurace" />
@@ -177,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687152244168</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Restaurant project&#10;- modification of loadDataFromOrdersFile method - getting Dish class from file data&#10;- add getDishFromOrderList method in OrdersList class to get Dish class object from OrdersList arrayList">
+      <created>1688543918130</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688543918131</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +214,7 @@
     <MESSAGE value="Restaurant project&#10;- add one method in OrdersList class &#10;1) to print order for particular table according to instructions and connection to front end (exportForOneTable)" />
     <MESSAGE value="Restaurant project&#10;- final version of project" />
     <MESSAGE value="Restaurant project&#10;- create method getCategoryLowerCase() in Dish class to print dish category in lower case&#10;- use this method in printDishList() method in DishList class and in printMenu() method in MenuList class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- create method getCategoryLowerCase() in Dish class to print dish category in lower case&#10;- use this method in printDishList() method in DishList class and in printMenu() method in MenuList class" />
+    <MESSAGE value="Restaurant project&#10;- modification of loadDataFromOrdersFile method - getting Dish class from file data&#10;- add getDishFromOrderList method in OrdersList class to get Dish class object from OrdersList arrayList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- modification of loadDataFromOrdersFile method - getting Dish class from file data&#10;- add getDishFromOrderList method in OrdersList class to get Dish class object from OrdersList arrayList" />
   </component>
 </project>

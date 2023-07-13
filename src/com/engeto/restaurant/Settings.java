@@ -10,7 +10,7 @@ public class Settings {
     public static String getOrdersFilename(){return ORDERS_FILENAME;}
     public static String getDishListFilename(){return DISHLIST_FILENAME;}
     public static String getMenuFilename(){return MENU_FILENAME;}
-    public static String getDelimiter(){return ORDERS_FILENAME;}
+    public static String getDelimiter(){return DELIMITER;}
 
 
 

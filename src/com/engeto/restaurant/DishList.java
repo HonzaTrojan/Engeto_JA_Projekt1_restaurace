@@ -38,8 +38,8 @@ public class DishList {
         int i = 1;
         for (Dish dish : dishList){
             System.out.println("Dish no." + i + ": " + dish.getTitle() + ", price of dish is " + dish.getPrice() +
-                    " Eur, preparation time is " + dish.getPreparationTime() + " minutes, category of dish is " +
-                    dish.getCategoryLowerCase());
+                    " Eur, preparation time is " + dish.getPreparationTimeMinutes() + " minutes, category of dish is \"" +
+                    dish.getCategory().toLowerCase() + "\"");
             i++;
         }
     }
@@ -55,12 +55,13 @@ public class DishList {
         try (PrintWriter outputWriter = new PrintWriter(new BufferedWriter(new FileWriter(filename)))) {
             for (Dish dish : dishList){
                 line = dish.getTitle() + Settings.DELIMITER + dish.getPrice() + Settings.DELIMITER +
-                        dish.getPreparationTime() + Settings.DELIMITER + dish.getPhotoUrl() +
+                        dish.getPreparationTimeMinutes() + Settings.DELIMITER + dish.getPhotoUrl() +
                         Settings.DELIMITER + dish.getCategory();
                 outputWriter.println(line);
             }
         } catch (IOException e) {
-            System.err.println("IOException problem");
+            throw new DishException("Došlo k chybě při zápisu do soubrou: " + filename +
+                    ": " + e.getLocalizedMessage());
         }
     }
 

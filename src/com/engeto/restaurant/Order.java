@@ -9,7 +9,7 @@ public class Order {
     private String waiter;
     private Dish dish;
     private LocalDateTime orderedTime;
-    private LocalDateTime fulfilmentTime = null;
+    private LocalDateTime fulfilmentTime;
     private String note;
 
     public Order(int table, String waiter, Dish dish, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, String note) {

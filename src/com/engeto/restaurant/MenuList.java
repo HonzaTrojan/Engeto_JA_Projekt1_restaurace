@@ -24,7 +24,7 @@ public class MenuList {
         menu.remove(dish);
     }
 
-    public void removeAllFromMenu(){
+    public void clearMenuList(){
         menu.clear();
     }
 

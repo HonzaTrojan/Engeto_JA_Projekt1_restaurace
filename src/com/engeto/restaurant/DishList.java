@@ -30,7 +30,7 @@ public class DishList {
     public int dishListSize(){
         return dishList.size();
     }
-    public void dishListClear(){
+    public void clearDishList(){
         dishList.clear();
     }
 

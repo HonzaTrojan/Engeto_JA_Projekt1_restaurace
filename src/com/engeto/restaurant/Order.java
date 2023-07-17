@@ -13,7 +13,8 @@ public class Order {
     private boolean isTheOrderFulfilled;
     private String note;
 
-    public Order(int table, String waiter, Dish dish, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, boolean isTheOrderFulfilled, String note) {
+    public Order(int table, String waiter, Dish dish, LocalDateTime orderedTime,
+                 LocalDateTime fulfilmentTime, boolean isTheOrderFulfilled, String note) {
         this.table = table;
         this.waiter = waiter;
         this.dish = dish;
@@ -26,7 +27,6 @@ public class Order {
     /** Constructor without setting fulfilmetTime (the order is not finished yet)
     *       fulfilmentTime = orderedTime and isTheOrderFulfilled = false
     */
-
     public Order (int table, String waiter, Dish dish, LocalDateTime orderedTime, String note) {
         this (table, waiter, dish, orderedTime, orderedTime, false, note);
     }

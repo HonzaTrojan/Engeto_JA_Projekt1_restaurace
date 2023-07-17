@@ -35,8 +35,9 @@ public class OrdersList {
     }
 
 
+
 public Dish getDishFromOrderList (String nameOfDish){
-        Dish dish = null;
+    Dish dish = new Dish("Empty slot", BigDecimal.ZERO, 0, "", Category.MAINDISH);
         for (Order order : ordersList){
             if (order.getDishFromOrder().getTitle().equals(nameOfDish)) {
                 dish = order.getDishFromOrder();

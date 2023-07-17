@@ -45,6 +45,8 @@ public class Main {
             System.err.println(ex.getLocalizedMessage());
         }
 
+        dishList.clearDishList();
+
         try {
             dishList.loadDataFromDishFile(Settings.getDishListFilename());
         } catch (DishException e) {
@@ -74,13 +76,14 @@ public class Main {
             System.err.println(ex.getLocalizedMessage());
         }
 
+        menu.clearMenuList();
+
         try {
             menu.loadDataFromMenuFile(Settings.getMenuFilename());
         } catch (DishException e) {
             System.err.println(e.getLocalizedMessage());
             System.out.println(menu.getMenu());
         }
-
 
 
         Order order1 = new Order(1, "Evelina", menu.getDishFromMenu(0), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), true, "Dish and service were amazing!");
@@ -129,7 +132,10 @@ public class Main {
             System.out.println(ordersList.getOrdersList());
         }
 
-//        ordersList.clearOrdersList();
+        /**
+         *   Test of right writting data from file
+         */
+        //ordersList.clearOrdersList();
 
         try {
             ordersList.loadDataFromOrdersFile(Settings.getOrdersFilename());

@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- modification of loadDataFromOrdersFile method - getting Dish class from file data&#10;- add getDishFromOrderList method in OrdersList class to get Dish class object from OrdersList arrayList">
+    <list default="true" id="4b5d6fd8-1957-4a09-8ff7-d64306e3934a" name="Changes" comment="Restaurant project&#10;- rename method Dish.preparationTime to preparationTimeMinutes&#10;- move method getCategoryLowerCase() to Category class&#10;- delegate IOException into superordinate code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/DishList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/MenuList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/OrdersList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/restaurant/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/restaurant/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Programy/Programovani/Workspace/IntelliJ IDEA/Engeto - Java akademie/Engeto_JA05_SouboryVyjimky - cviceni hodina"
+    "last_opened_file_path": "C:/Programy/Programovani/Workspace/IntelliJ IDEA/Engeto - Java akademie/Engeto_JA - Projekt 1 - restaurace"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -188,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688543918131</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Restaurant project&#10;- rename method Dish.preparationTime to preparationTimeMinutes&#10;- move method getCategoryLowerCase() to Category class&#10;- delegate IOException into superordinate code">
+      <created>1689227097814</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689227097814</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +219,7 @@
     <MESSAGE value="Restaurant project&#10;- final version of project" />
     <MESSAGE value="Restaurant project&#10;- create method getCategoryLowerCase() in Dish class to print dish category in lower case&#10;- use this method in printDishList() method in DishList class and in printMenu() method in MenuList class" />
     <MESSAGE value="Restaurant project&#10;- modification of loadDataFromOrdersFile method - getting Dish class from file data&#10;- add getDishFromOrderList method in OrdersList class to get Dish class object from OrdersList arrayList" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- modification of loadDataFromOrdersFile method - getting Dish class from file data&#10;- add getDishFromOrderList method in OrdersList class to get Dish class object from OrdersList arrayList" />
+    <MESSAGE value="Restaurant project&#10;- rename method Dish.preparationTime to preparationTimeMinutes&#10;- move method getCategoryLowerCase() to Category class&#10;- delegate IOException into superordinate code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant project&#10;- rename method Dish.preparationTime to preparationTimeMinutes&#10;- move method getCategoryLowerCase() to Category class&#10;- delegate IOException into superordinate code" />
   </component>
 </project>

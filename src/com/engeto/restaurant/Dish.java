@@ -69,15 +69,6 @@ public class Dish {
     }
     ///endregion
 
-//    public String getCategoryLowerCase(){
-//        if (getCategory().equals(Category.STARTER)) return "starter";
-//        else if (getCategory().equals(Category.SOUP)) return "soup";
-//        else if (getCategory().equals(Category.MAINDISH)) return "main dish";
-//        else if (getCategory().equals(Category.DESSERT)) return "dessert";
-//        else if (getCategory().equals(Category.DRINK)) return "drink";
-//        return null;
-//    }
-
 
 
     @Override

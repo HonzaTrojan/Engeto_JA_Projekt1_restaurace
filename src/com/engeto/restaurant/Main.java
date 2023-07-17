@@ -83,12 +83,12 @@ public class Main {
 
 
 
-        Order order1 = new Order(1, "Evelina", menu.getDishFromMenu(0), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), "Dish and service were amazing!");
-        Order order2 = new Order(1, "Evelina", menu.getDishFromMenu(1), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), "Dish and service were amazing!");
-        Order order3 = new Order(1, "Niel", menu.getDishFromMenu(2), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), "Dish and service were amazing!");
-        Order order4 = new Order(1, "Evelina", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), "Dish and service were amazing!");
-        Order order5 = new Order(2, "Chrudo", menu.getDishFromMenu(3), LocalDateTime.now().minusMinutes(60), LocalDateTime.now().minusMinutes(5), "I like the food but service was sooo slow!");
-        Order order6 = new Order(2, "Chrudo", menu.getDishFromMenu(5), LocalDateTime.now().minusMinutes(60), LocalDateTime.now().minusMinutes(5), "I like the food but service was sooo slow!");
+        Order order1 = new Order(1, "Evelina", menu.getDishFromMenu(0), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), true, "Dish and service were amazing!");
+        Order order2 = new Order(1, "Evelina", menu.getDishFromMenu(1), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), true, "Dish and service were amazing!");
+        Order order3 = new Order(1, "Niel", menu.getDishFromMenu(2), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), true, "Dish and service were amazing!");
+        Order order4 = new Order(1, "Evelina", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(120), LocalDateTime.now().minusMinutes(10), true, "Dish and service were amazing!");
+        Order order5 = new Order(2, "Chrudo", menu.getDishFromMenu(3), LocalDateTime.now().minusMinutes(60), LocalDateTime.now().minusMinutes(5), true, "I like the food but service was sooo slow!");
+        Order order6 = new Order(2, "Chrudo", menu.getDishFromMenu(5), LocalDateTime.now().minusMinutes(60), LocalDateTime.now().minusMinutes(5), true, "I like the food but service was sooo slow!");
         Order order7 = new Order(15, "Zed", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(120), "One more");
         Order order8 = new Order(15, "Stahlav", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(100), "One more....");
         Order order9 = new Order(15, "Stahlav", menu.getDishFromMenu(6), LocalDateTime.now().minusMinutes(90), "One more....");
@@ -126,7 +126,10 @@ public class Main {
             ordersList.addDataIntoOrdersFile(Settings.getOrdersFilename());
         } catch (DishException ex) {
             System.err.println(ex.getLocalizedMessage());
+            System.out.println(ordersList.getOrdersList());
         }
+
+//        ordersList.clearOrdersList();
 
         try {
             ordersList.loadDataFromOrdersFile(Settings.getOrdersFilename());

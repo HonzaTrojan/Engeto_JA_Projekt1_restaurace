@@ -34,10 +34,14 @@ public class OrdersList {
         return ordersList.size();
     }
 
-    public Dish getDishFromOrderList (String nameOfDish){
+
+public Dish getDishFromOrderList (String nameOfDish){
         Dish dish = null;
         for (Order order : ordersList){
-            if (order.getDishFromOrder().getTitle().equals(nameOfDish)) return order.getDishFromOrder();
+            if (order.getDishFromOrder().getTitle().equals(nameOfDish)) {
+                dish = order.getDishFromOrder();
+                break;
+            }
         }
      return dish;
     }
@@ -144,7 +148,7 @@ public class OrdersList {
                 line = order.getTable() + Settings.DELIMITER + order.getWaiter() + Settings.DELIMITER +
                         order.getDishFromOrder() + Settings.DELIMITER + order.getOrderedTime() +
                         Settings.DELIMITER + order.getFulfilmentTime() + Settings.DELIMITER +
-                        order.getNote();
+                        order.isTheOrderFulfilled() + Settings.DELIMITER + order.getNote();
                 outputWriter.println(line);
             }
         } catch (IOException e) {
@@ -167,7 +171,8 @@ public class OrdersList {
                 line = scanner.nextLine();
                 items = line.split(Settings.DELIMITER);
               Order order = new Order(Integer.parseInt(items[0]), items[1], getDishFromOrderList(items[2]),
-                        LocalDateTime.parse(items[3]), LocalDateTime.parse(items[4]), items[5]);
+                        LocalDateTime.parse(items[3]), LocalDateTime.parse(items[4]),
+                      Boolean.parseBoolean(items[5]), items[6]);
                 ordersList.add(order);
 
 

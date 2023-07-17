@@ -10,19 +10,25 @@ public class Order {
     private Dish dish;
     private LocalDateTime orderedTime;
     private LocalDateTime fulfilmentTime;
+    private boolean isTheOrderFulfilled;
     private String note;
 
-    public Order(int table, String waiter, Dish dish, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, String note) {
+    public Order(int table, String waiter, Dish dish, LocalDateTime orderedTime, LocalDateTime fulfilmentTime, boolean isTheOrderFulfilled, String note) {
         this.table = table;
         this.waiter = waiter;
         this.dish = dish;
         this.orderedTime = orderedTime;
         this.fulfilmentTime = fulfilmentTime;
+        this.isTheOrderFulfilled = isTheOrderFulfilled;
         this.note = note;
     }
 
+    /** Constructor without setting fulfilmetTime (the order is not finished yet)
+    *       fulfilmentTime = orderedTime and isTheOrderFulfilled = false
+    */
+
     public Order (int table, String waiter, Dish dish, LocalDateTime orderedTime, String note) {
-        this (table, waiter, dish, orderedTime, null, note);
+        this (table, waiter, dish, orderedTime, orderedTime, false, note);
     }
 
     ///region Getters and setters
@@ -65,6 +71,14 @@ public class Order {
 
     public void setFulfilmentTime(LocalDateTime fulfilmentTime) {
         this.fulfilmentTime = fulfilmentTime;
+    }
+
+    public boolean isTheOrderFulfilled() {
+        return isTheOrderFulfilled;
+    }
+
+    public void setTheOrderFulfilled(boolean theOrderFulfilled) {
+        isTheOrderFulfilled = theOrderFulfilled;
     }
 
     public String getNote() {
